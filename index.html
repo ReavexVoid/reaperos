@@ -61,16 +61,30 @@
     </header>
     <main>
         <h2>Elérhető verziók</h2>
-        <ul class="version-list">
-            <li>
-                <h3>ReaperOS 0.1</h3>
-                <p>Az első hivatalos verzió.</p>
-                <a class="download-btn" href="downloads/ReaperOS-0.1.zip" download>Letöltés</a>
-            </li>
-        </ul>
+        <ul id="versionList" class="version-list"></ul>
     </main>
     <footer>
         &copy; 2025 ReaperOS
     </footer>
+
+    <script>
+        // Ide írd a letölthető fájlok nevét és verzióját
+        const downloads = [
+            { version: "0.1", file: "downloads/ReaperOS-0.1.zip", description: "Az első hivatalos verzió." }
+            // Később ide lehet hozzáadni új verziókat
+        ];
+
+        const versionList = document.getElementById("versionList");
+
+        downloads.forEach(item => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <h3>ReaperOS ${item.version}</h3>
+                <p>${item.description}</p>
+                <a class="download-btn" href="${item.file}" download>Letöltés</a>
+            `;
+            versionList.appendChild(li);
+        });
+    </script>
 </body>
 </html>
