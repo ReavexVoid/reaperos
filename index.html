@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReaperOS Letöltések</title>
+    <title>ReaperOS Downloads</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,10 +57,10 @@
 </head>
 <body>
     <header>
-        <h1>ReaperOS Letöltések</h1>
+        <h1>ReaperOS Downloads</h1>
     </header>
     <main>
-        <h2>Elérhető verziók</h2>
+        <h2>Available Versions</h2>
         <ul id="versionList" class="version-list"></ul>
     </main>
     <footer>
@@ -68,10 +68,10 @@
     </footer>
 
     <script>
-        // Ide írd a letölthető fájlok nevét és verzióját
+        // List of downloadable files
         const downloads = [
-            { version: "0.1", file: "downloads/ReaperOS-0.1.zip", description: "Az első hivatalos verzió." }
-            // Később ide lehet hozzáadni új verziókat
+            { version: "0.1", file: "downloads/ReaperOS-0.1.zip", description: "The first official release." }
+            // Add new versions here
         ];
 
         const versionList = document.getElementById("versionList");
@@ -81,7 +81,7 @@
             li.innerHTML = `
                 <h3>ReaperOS ${item.version}</h3>
                 <p>${item.description}</p>
-                <a class="download-btn" href="${item.file}" download>Letöltés</a>
+                <a class="download-btn" href="${item.file}" download>Download</a>
             `;
             versionList.appendChild(li);
         });
