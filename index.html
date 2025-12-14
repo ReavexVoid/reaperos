@@ -5,86 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReaperOS Downloads</title>
     <style>
+        /* Alap stílus */
         body {
             font-family: Arial, sans-serif;
-            background-color: #1e1e1e;
+            background-color: #121212;
             color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #282828;
             padding: 20px;
-            text-align: center;
         }
-        header h1 {
-            margin: 0;
+
+        h1 {
             color: #ff4c4c;
+            margin-bottom: 10px;
         }
-        main {
-            padding: 40px;
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #cccccc;
+            max-width: 400px;
             text-align: center;
         }
-        .version-list {
-            list-style: none;
-            padding: 0;
-        }
-        .version-list li {
-            margin: 20px 0;
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-        }
+
         .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
             background-color: #ff4c4c;
             color: #fff;
-            padding: 10px 20px;
             text-decoration: none;
-            border-radius: 5px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
         }
+
         .download-btn:hover {
             background-color: #e04343;
+            transform: scale(1.05);
         }
+
         footer {
-            background-color: #282828;
-            padding: 10px;
-            text-align: center;
-            margin-top: 40px;
+            position: absolute;
+            bottom: 10px;
+            color: #666;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>ReaperOS Downloads</h1>
-    </header>
-    <main>
-        <h2>Available Versions</h2>
-        <ul id="versionList" class="version-list"></ul>
-    </main>
+    <h1>ReaperOS Downloads</h1>
+    <h2>Available Version</h2>
+    <p>ReaperOS 0.1 – The first official release.</p>
+    <a class="download-btn" href="0.1.zip" download>Download 0.1</a>
+
     <footer>
         &copy; 2025 ReaperOS
     </footer>
-
-    <script>
-        // List of downloadable files
-        const downloads = [
-            { version: "0.1", file: "downloads/ReaperOS-0.1.zip", description: "The first official release." }
-            // Add new versions here
-        ];
-
-        const versionList = document.getElementById("versionList");
-
-        downloads.forEach(item => {
-            const li = document.createElement("li");
-            li.innerHTML = `
-                <h3>ReaperOS ${item.version}</h3>
-                <p>${item.description}</p>
-                <a class="download-btn" href="${item.file}" download>Download</a>
-            `;
-            versionList.appendChild(li);
-        });
-    </script>
 </body>
 </html>
